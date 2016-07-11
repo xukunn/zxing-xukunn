@@ -102,7 +102,7 @@ final class CameraConfigurationManager {
     parameters.setPreviewSize(cameraResolution.x, cameraResolution.y);
 
     Log.i(TAG, "Final camera parameters: " + parameters.flatten());
-
+    camera.setDisplayOrientation(90);//add 这句代码作用是旋转镜头90度，使相机预览方向正确显示
     camera.setParameters(parameters);
 
     Camera.Parameters afterParameters = camera.getParameters();
